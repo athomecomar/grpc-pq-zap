@@ -30,4 +30,4 @@ Driver is the std, lib/pq, with the addition of sqlx
 It uses JSONNET for fixtures, go-cmp for diffs.
 From std lib, it'll use httpstub and httptest for stubbing http reqs and go-sqlmock for mocking sql responses
 
-Fixtures will be under testdata/<entity>.jsonnet, being entity the name of the model created on entities/*.go
+Fixtures will be under testdata/<entity>.jsonnet, being entity the name of the model created on ent/*.go
