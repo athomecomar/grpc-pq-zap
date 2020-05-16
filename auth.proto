@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+option go_package = "./pbauth";
+
+package auth;
+
+service Auth {
+  rpc SignIn (SignInRequest) returns (SignInResponse) {}
+  // rpc SignUp (SignUpUserRequest) returns (SignUpUserResponse) {}
+  // rpc SignOut (SignOutUserRequest) returns (SignOutUserResponse) {}
+}
+
+message SignInRequest {
+  string email = 1;
+  string password = 2;
+}
+
+message SignInResponse {
+  repeated SignInUser Users = 1; 
+}
+
+message SignInUser {
+  string token = 1;
+  string role = 2;
+  string name = 3;
+  string surname = 4;
+  string email = 5;
+}
