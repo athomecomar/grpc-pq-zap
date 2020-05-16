@@ -1,4 +1,4 @@
-package entities
+package ent
 
 type User struct {
 	Email        string `json:"email,omitempty"`
