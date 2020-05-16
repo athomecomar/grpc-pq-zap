@@ -6,8 +6,6 @@ package auth;
 
 service Auth {
   rpc SignIn (SignInRequest) returns (SignInResponse) {}
-  // rpc SignUp (SignUpUserRequest) returns (SignUpUserResponse) {}
-  // rpc SignOut (SignOutUserRequest) returns (SignOutUserResponse) {}
 }
 
 message SignInRequest {
