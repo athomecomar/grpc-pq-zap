@@ -1,2 +1,3 @@
 #!/bin/bash
+cd pb
 protoc -I . ./auth.proto --go_out=plugins=grpc:. --js_out=library=pb_auth,binary:pbjs
