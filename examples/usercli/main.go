@@ -6,7 +6,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/athomecomar/grpc-pq-zap/pb/pbauth"
+	"github.com/athomecomar/grpc-pq-zap/pb/pbuser"
 	"google.golang.org/grpc"
 )
 
@@ -22,7 +22,7 @@ func main() {
 		log.Fatalf("did not connect: %v", err)
 	}
 	defer conn.Close()
-	c := pbauth.NewAuthClient(conn)
+	c := pbuser.NewUserClient(conn)
 
 	// Contact the server and print out its response.
 	email := defaultEmail
@@ -31,7 +31,7 @@ func main() {
 	}
 	ctx, cancel := context.WithTimeout(context.Background(), time.Second)
 	defer cancel()
-	r, err := c.SignIn(ctx, &pbauth.SignInRequest{Email: email, Password: "athome"})
+	r, err := c.SignIn(ctx, &pbuser.SignInRequest{Email: email, Password: "athome"})
 	if err != nil {
 		log.Fatalf("could not greet: %v", err)
 	}

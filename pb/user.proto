@@ -1,10 +1,10 @@
 syntax = "proto3";
 
-option go_package = "./pbauth";
+option go_package = "./pbuser";
 
-package auth;
+package user;
 
-service Auth {
+service User {
   rpc SignIn (SignInRequest) returns (SignInResponse) {}
 }
 

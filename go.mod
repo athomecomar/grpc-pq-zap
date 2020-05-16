@@ -4,6 +4,7 @@ go 1.14
 
 require (
 	github.com/athomecomar/envconf v1.0.0
+	github.com/golang-migrate/migrate/v4 v4.11.0 // indirect
 	github.com/golang/protobuf v1.4.1
 	golang.org/x/net v0.0.0-20200513185701-a91f0712d120 // indirect
 	golang.org/x/sys v0.0.0-20200513112337-417ce2331b5c // indirect

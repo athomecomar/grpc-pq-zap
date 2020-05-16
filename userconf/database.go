@@ -1,4 +1,4 @@
-package authconf
+package userconf
 
 import (
 	"github.com/athomecomar/envconf"
